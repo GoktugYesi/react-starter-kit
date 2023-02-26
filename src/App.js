@@ -2,9 +2,10 @@ import logo from './logo.svg';
 import Test from './Test';
 import { Title } from './Components';
 import Bottstrap from './Bootstrap';
-
+import Tailwind from './Tailwind';
 
 import styles from './App.module.css';
+import './tailwind.css'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       }
       <Test />
       <Bottstrap />
+      <Tailwind />
     </div>
     
   );
