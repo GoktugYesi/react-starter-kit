@@ -1,0 +1,17 @@
+//npm i sass
+
+$red: red;
+$blue: blue;
+$green: green;
+$yellow: yellow;
+$orange: orange;
+
+
+.env{
+ background-color: $orange;
+ span{
+    color: $green;
+    font-size: 30px;
+    font-weight: bold;
+ }
+}
