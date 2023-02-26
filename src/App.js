@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import Test from './Test';
 import { Title } from './Components';
+import Bottstrap from './Bootstrap';
+
 
 import styles from './App.module.css';
 
@@ -21,6 +23,7 @@ function App() {
       <img src="/logo192.png" alt="" />
       }
       <Test />
+      <Bottstrap />
     </div>
     
   );
