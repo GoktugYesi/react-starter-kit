@@ -1,36 +1,32 @@
-import logo from './logo.svg';
-import Test from './Test';
-import { Title } from './Components';
-import Bottstrap from './Bootstrap';
-import Tailwind from './Tailwind';
+import { createElement } from 'react';
 
-import styles from './App.module.css';
-//import './tailwind.css'
 import './style.scss'
 
 function App() {
+  //JSX olmasaydi
 
-  if (process.env.NODE_ENV === 'production') {
-    //analtics bilgi gönderimi
-  }
+  // import { createElement } from 'react'; //bu importu yukarda yaptik
+  const todos = ['todo1', 'todo2', 'todo3'];
+  const h1 = createElement('h1', null, 'React App');
+  const ul = createElement('ul', null, todos.map((todo) => createElement('li', null, todo)));
+  return createElement('main',{
+    className: 'test',
+    id: 'main'
+  }, h1, ul)
 
+  //JSX ile
   return (
-    <div className={styles.App}>
-      <Title>{process.env.NODE_ENV}</Title>
-      <Title theme="dark">{process.env.NODE_ENV}</Title>
-      <p className='env'>
-        {process.env.REACT_APP_API_URL}
-        <span>scss test</span>
-      </p>
-      {process.env.NODE_ENV === 'production' && 
-      <img src="/logo192.png" alt="" />
-      }
-      <Test />
-      <Bottstrap />
-      <Tailwind />
-    </div>
-    
+    <main id='main' className='test'>
+      <h1>React App</h1>
+      <ul>
+        {todos.map((todo) => (
+          <li>{todo}</li>
+
+        ))}
+      </ul>
+    </main>
   );
+
 }
 
 export default App;
